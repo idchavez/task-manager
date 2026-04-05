@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Task Manager</title>
+</head>
+<body>
+    <section>
+        <h1>Task Manager</h1>
+        <p class="tareas"><span id="tareasCompletadas"></span> de <span id="tareasAsignadas"></span> tareas completadas</p>
+    
+        <input type="text" id="tarea" placeholder="Escribe una tarea...">
+    
+        <select id="seleccion">
+            <option selected disabled>--Categoria--</option>
+            <option value="trabajo">💼 Trabajo</option>
+            <option value="estudio">📚 Estudio</option>
+            <option value="personal">🏡 Personal</option>
+            <option value="urgente">🚨 Urgente</option>
+            <option value="otra">Otra...</option>
+        </select>
+
+        <input type="text" class="ocultar" id="otraCategoria">
+
+        <button class="agregar" onclick="agregarTarea()">+ Agregar tarea</button>
+        <span id="campoVacio" hidden>Uno o mas campos estan vacios</span>
+
+        <div>
+            <ul id="listaTareas">
+            </ul>
+            <button class="hecha" onclick="tareaTerminada()">✔ Hecha</button>
+            <button class="urgente">🕙 Urgente</button>
+            <button onclick="eliminarTarea()">✖ Eliminar</button>
+        </div>
+        
+        <button class="limpiar-completadas">Limpiar completadas</button>
+    </section>
+    
+    <script src="app.js"></script>
+</body>
+</html>
