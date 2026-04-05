@@ -28,14 +28,10 @@
         <span id="campoVacio" hidden>Uno o mas campos estan vacios</span>
 
         <div>
-            <ul id="listaTareas">
-            </ul>
-            <button class="hecha" onclick="tareaTerminada()">✔ Hecha</button>
-            <button class="urgente">🕙 Urgente</button>
-            <button onclick="eliminarTarea()">✖ Eliminar</button>
+            <ul id="listaTareas"></ul>
         </div>
         
-        <button class="limpiar-completadas">Limpiar completadas</button>
+        <button class="limpiar-completadas" onclick="limpiarCompletadas()">Limpiar completadas</button>
     </section>
     
     <script src="app.js"></script>
